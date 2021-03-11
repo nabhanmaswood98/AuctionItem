@@ -3,7 +3,7 @@
     <referenceContainer name="content">
         <block class="Magento\Framework\View\Element\Template" name="rp_auction_index_index" template="SomethingDigital_AuctionItem::index.phtml">
             <arguments>
-                <argument name="view-model" xsi:type="object">SomethingDigital\AuctionItem\ViewModel\AuctionItemCollectionRenderer</argument>
+                <argument name="view_model" xsi:type="object">SomethingDigital\AuctionItem\ViewModel\AuctionItemData</argument>
             </arguments>
         </block>
     </referenceContainer>

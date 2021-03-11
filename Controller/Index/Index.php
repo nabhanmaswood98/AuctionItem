@@ -10,7 +10,6 @@ use Magento\Framework\View\Result\PageFactory;
  * Custom Controller for Auction Item display Page
  *
  * Class Index
- * @package SomethingDigital\AuctionItem\Controller\Index
  */
 class Index implements ActionInterface
 {
@@ -37,8 +36,6 @@ class Index implements ActionInterface
     }
 
     /**
-     * Execute function that returns page
-     *
      * @return ResultInterface
      */
     public function execute()

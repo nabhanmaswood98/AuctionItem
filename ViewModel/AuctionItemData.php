@@ -10,9 +10,8 @@ use SomethingDigital\AuctionItem\Model\AuctionItemRepository;
  * View Model to display Auction Items
  *
  * Class AuctionItemCollectionRenderer
- * @package SomethingDigital\AuctionItem\ViewModel
  */
-class AuctionItemCollectionRenderer implements ArgumentInterface
+class AuctionItemData implements ArgumentInterface
 {
     /**
      * @var AuctionItemRepository
@@ -38,7 +37,7 @@ class AuctionItemCollectionRenderer implements ArgumentInterface
     /**
      * Returns collection of all Contacts
      *
-     * @return Collection
+     * @return AuctionItem[]
      */
     public function getAllAuctionItems()
     {
