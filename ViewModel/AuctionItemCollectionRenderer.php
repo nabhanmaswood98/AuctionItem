@@ -42,6 +42,6 @@ class AuctionItemCollectionRenderer implements ArgumentInterface
      */
     public function getAllAuctionItems()
     {
-        return $this->auctionItemRepository->getList($this->searchCriteriaBuilder->create());
+        return $this->auctionItemRepository->getList($this->searchCriteriaBuilder->create())->getItems();
     }
 }
