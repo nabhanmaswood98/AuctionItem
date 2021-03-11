@@ -80,7 +80,7 @@ class Post implements HttpPostActionInterface
         }
 
         $redirect = $this->redirectFactory->create();
-        $redirect->setUrl('/rp_auction/request/form');
+        $redirect->setUrl('/auction/request/form');
 
         return $redirect;
     }
