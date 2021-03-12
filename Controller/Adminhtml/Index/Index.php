@@ -12,6 +12,12 @@ use Magento\Framework\View\Result\PageFactory;
  */
 class Index implements HttpGetActionInterface
 {
+    /**
+     * ACL id for resource
+     *
+     * @const string
+     */
+    const ADMIN_RESOURCE = 'SomethingDigital_AuctionItem::grid';
 
     /**
      * @var PageFactory
@@ -33,6 +39,8 @@ class Index implements HttpGetActionInterface
     public function execute()
     {
         $resultPage = $this->pageFactory->create();
+        $resultPage->setActiveMenu('SomethingDigital_AuctionItem::grid');
+        $resultPage->getConfig()->getTitle()->prepend(__('Auction Item Grid'));
         return $resultPage;
     }
 }

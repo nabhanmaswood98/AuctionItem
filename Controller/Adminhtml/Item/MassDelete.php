@@ -20,6 +20,11 @@ use SomethingDigital\AuctionItem\Model\ResourceModel\AuctionItem\CollectionFacto
 class MassDelete extends Action implements HttpPostActionInterface
 {
     /**
+     * Authorization level
+     */
+    const ADMIN_RESOURCE = 'SomethingDigital_AuctionItem::grid';
+
+    /**
      * @var CollectionFactory
      */
     protected $collectionFactory;
