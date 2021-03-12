@@ -9,7 +9,6 @@ use Magento\Framework\View\Result\PageFactory;
  * Custom Controller for Auction Item Grid
  *
  * Class Index
- * @package SomethingDigital\ContactForm\Controller\Adminhtml\Index
  */
 class Index implements HttpGetActionInterface
 {
