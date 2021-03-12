@@ -90,6 +90,11 @@ class Post implements HttpPostActionInterface
      */
     public function handlePost($post)
     {
+        if (!$this->validatedParams($post)) {
+            $this->messageManager->addErrorMessage("Invalid parameters!");
+            return;
+        }
+
         $auctionItem = $this->auctionItemFactory->create();
 
         $auctionItem->setItemName($post["item-name"]);
@@ -108,5 +113,25 @@ class Post implements HttpPostActionInterface
         } catch (CouldNotSaveException $exception) {
             $this->messageManager->addErrorMessage("Unable to save Auction Item!");
         }
+    }
+
+    /**
+     * @return boolean
+     */
+    private function validatedParams($post)
+    {
+        if (trim($post['item-name']) === '') {
+            return false;
+        }
+
+        if (!is_numeric($post['item-base-auction-price']) || $post['item-base-auction-price'] < 0) {
+            return false;
+        }
+
+        if (false === \strpos($post['item-owner-email'], '@')) {
+            return false;
+        }
+
+        return true;
     }
 }
