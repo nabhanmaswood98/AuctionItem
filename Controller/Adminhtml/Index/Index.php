@@ -39,7 +39,7 @@ class Index implements HttpGetActionInterface
     public function execute()
     {
         $resultPage = $this->pageFactory->create();
-        $resultPage->setActiveMenu('SomethingDigital_AuctionItem::grid');
+        $resultPage->setActiveMenu(ADMIN_RESOURCE);
         $resultPage->getConfig()->getTitle()->prepend(__('Auction Item Grid'));
         return $resultPage;
     }
