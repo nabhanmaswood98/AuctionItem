@@ -14,7 +14,6 @@ use Psr\Log\LoggerInterface;
  * Repository for AuctionItem
  *
  * Class AuctionItemRepository
- * @package SomethingDigital\AuctionItem\Model
  */
 class AuctionItemRepository implements AuctionItemRepositoryInterface
 {
@@ -110,7 +109,7 @@ class AuctionItemRepository implements AuctionItemRepositoryInterface
      * Retrieve AuctionItems matching the SearchCriteria
      *
      * @param SearchCriteriaInterface $searchCriteria
-     * @return array
+     * @return SearchResultsInterface
      */
     public function getList(SearchCriteriaInterface $searchCriteria)
     {

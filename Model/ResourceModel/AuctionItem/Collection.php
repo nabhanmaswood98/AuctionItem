@@ -10,7 +10,6 @@ use SomethingDigital\AuctionItem\Model\ResourceModel\AuctionItem as ResourceMode
  * Auction Item Collection
  *
  * Class Collection
- * @package SomethingDigital\AuctionItem\Model\ResourceModel\AuctionItem
  */
 class Collection extends AbstractCollection
 {

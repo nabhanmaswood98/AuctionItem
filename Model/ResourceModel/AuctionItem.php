@@ -8,7 +8,6 @@ use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
  * Auction Item Model
  *
  * Class AuctionItem
- * @package SomethingDigital\AuctionItem\Model\ResourceModel
  */
 class AuctionItem extends AbstractDb
 {
